@@ -1,0 +1,123 @@
+﻿SNHU logo 
+
+CS 255 Business Requirements Document Template
+
+
+Complete this template by replacing the bracketed text with the relevant information.
+
+
+This template lays out all the different sections that you need to complete for Project One. Each section has guiding questions to prompt your thinking. These questions are meant to guide your initial responses to each area. You are encouraged to go beyond these questions using what you have learned in your readings. You will need to continually reference the interview transcript as you work to make sure that you are addressing your client’s needs. There is no required length for the final document. Instead, the goal is to complete each section based on your client’s needs.
+
+
+Tip: You should respond in a bulleted list for each section. This will make your thoughts easier to reference when you move into the design phase for Project Two. One starter bullet has been provided for you in each section, but you will need to add more.
+System Components and Design
+Purpose
+What is the purpose of this project? Who is the client and what do they want their system to be able to do?
+* Our client is DriverPass. A business attempting to make the driver’s test at the DMV easier for its clients by providing training in person and online. The purpose of the project is to build a web application to provide an interface for both the employees and the students at DriverPass. The system should allow for new user creation, appointment setting and modification, a learning interface with tests and content, and notes about the students progress.
+
+
+System Background
+What does DriverPass want the system to do? What is the problem they want to fix? What are the different components needed for this system?
+* The system will allow DriverPass, their employees and clients, to access material and information about the services provided. The problem to solve is to provide people a better opportunity to pass their driver’s test at the DMV. By providing one on one training with two hour driving appointments and the opportunity to access training material provided by DriverPass, a student will better their driving experience and therefore, a better opportunity to pass their test.
+All components required are:
+   * Scheduling (setting, changing, and deleting)
+   * Profile creation
+   * Interface for viewing appointments and driver notes
+   * Viewing who the clients driver is
+   * Viewing a clients profile from the employee end
+   * Student Information
+   * Interface for Special Needs
+   * Learning material
+   * Testing (completion, progress, and suggested)
+   * Lesson Tracking
+   * User roles
+
+
+
+
+Objectives and Goals
+What should this system be able to do when it is completed? What measurable tasks need to be included in the system design to achieve this?
+   * The system needs to be able to do the following:
+   * Customers should have an online portal where they can view available appointments, book them, and then manage the appointments. There should also be a view of notes of prior appointments.
+   * Customers will be able to manage their desired package and upgrade as needed.
+   * The system will provide role-based access to employee users.
+   * Administrative access will allow for customer viewing, tracking log actions and providing user reports, password resets, and package modification.
+   * The system will provide offline usage as far as viewing information. Not modifying.
+   * The system will integrate with postings by the DMV to alert administration of any changes to content.
+   * The measurable tasks for system design:
+   * Design and implement a login system for employees and clients that are role-based and able to access a password reset easily.
+   * Develop the system to allow for customers to book, modify, and cancel lessons. This should include an interface for selecting time, date, and driver.
+   * Design and implement a simple modification system for packages. Administration should be able to add, modify, and disable packages.
+   * Design an offline view where users can only view existing information and not modify it.
+   * Design the homepage view of the app for users to view all information in one spot.
+   * Design and implement a training section of the app where users can track and take tests as well as view content related to their package.
+   * Design a log system that tracks all changes to accounts, training sections, appointments and packages.
+
+
+Requirements
+Nonfunctional Requirements
+In this section, you will detail the different nonfunctional requirements for the DriverPass system. You will need to think about the different things that the system needs to function properly.
+
+
+Performance Requirements
+What environments (web-based, application, etc.) does this system need to run in? How fast should the system run? How often should the system be updated?
+   * The DriverPass system should be available as a web-based and native application to provide easy access for both employees and clients, ensuring flexibility for users to interact with the platform from any location and device with internet access. It should also be compatible with mobile devices to facilitate users on the go, making the training and appointment scheduling experience as seamless as possible. The system must run efficiently, with fast load times. The system should be able to handle many concurrent users without performance degradation. For updates, the system should be updated regularly. Monthly updates for bug fixes and quarterly updates for new features.
+
+
+Platform Constraints
+What platforms (Windows, Unix, etc.) should the system run on? Does the back end require any tools, such as a database, to support this application?
+   * The DriverPass system should be compatible with Windows, macOS, and Linux. It should run on all modern web browsers. The back end will require a relational database, such as MySQL or PostgreSQL, to manage user data, appointments, and content. A server side framework like Ruby on Rails will handle business logic and API interactions.
+
+
+Accuracy and Precision
+How will you distinguish between different users? Is the input case-sensitive? When should the system inform the admin of a problem?
+   * Users will be distinguished by unique login credentials and be tied to specific roles. The system will not be case sensitive for usernames but will require case sensitive passwords. Admins will be informed immediately of all issues, such as failed login attempts, system errors, or when user actions deviate from expected behavior.
+
+
+Adaptability 
+Can you make changes to the user (add/remove/modify) without changing code? How will the system adapt to platform updates? What type of access does the IT admin need? 
+   * The user management will be done through an administrative interface without changing code. The system will be designed to allow these updates dynamically. To adapt to platform updates, the system will be flexible, supporting updates and new configurations. The IT admin will have full access to manage system settings, monitor logs, and perform troubleshooting tasks.
+
+
+Security
+What is required for the user to log in? How can you secure the connection or the data exchange between the client and the server? What should happen to the account if there is a “brute force” hacking attempt? What happens if the user forgets their password? 
+   * To log in, the user needs a valid username and a password. To secure the connection and data exchange, we will use AES-128 encryption on all inputs being sent back to the server. To combat brute force attacks, there will be a three attempt maximum on login. After the third attempt, the user will need to notify an admin to have the password reset to allow the admin to review the legitimacy of the request. If a user forgets their password, they should be able to reset it through a secure, automated process via email verification or security questions.
+
+
+Functional Requirements
+Using the information from the scenario, think about the different functions the system needs to provide. Each of your bullets should start with “The system shall . . .” For example, one functional requirement might be, “The system shall validate user credentials when logging in.”
+   * The system shall provide a discussion forum for communication between students and instructors.
+   * The system shall allow instructors to manage and track student grades.
+   * The system shall enable instructors to set up and manage courses.
+   * The system shall allow students to submit assignments online.
+   * The system shall support quizzes and exams to assess student progress.
+   * The system shall provide communication channels like email and messaging for students and instructors.
+   * The system shall allow customers to book, modify, and cancel appointments.
+   * The system shall provide a view of prior appointment notes for customers.
+   * The system shall enable users to manage their desired training packages and upgrade as needed.
+   * The system shall provide role-based access for employees and customers.
+   * The system shall allow administrative users to view and track customer information and actions.
+   * The system shall allow administrators to reset passwords for users.
+   * The system shall provide offline access to view information without modifications.
+   * The system shall integrate with DMV postings to alert administration of content changes.
+   * The system shall track all changes to accounts, appointments, training sections, and packages.
+   * The system shall allow users to access learning material and take tests based on their package.
+
+
+User Interface
+What are the needs of the interface? Who are the different users for this interface? What will each user need to be able to do through the interface? How will the user interact with the interface (mobile, browser, etc.)? 
+   * The interface needs to be very user-friendly, responsive, simple, and accessible. Users will be employees and students. Instructors can manage appointments, track student progress, and access materials, while administrators can manage users, reset passwords, and configure packages. Students can book, modify, and cancel appointments, view training materials, take tests, and track progress. The interface will support a seamless user interaction across all devices.
+
+
+Assumptions
+What things were not specifically addressed in your design above? What assumptions are you making in your design about the users or the technology they have? 
+   * All users will have access to the system through various devices and networks, ensuring a flexible learning environment. Additionally, we assume users, both instructors and students, will receive adequate training to navigate the system effectively. Also, we assume the technology infrastructure, such as internet access and compatible devices, will be sufficient for smooth operation of the platform.
+
+
+Limitations
+Any system you build will naturally have limitations. What limitations do you see in your system design? What limitations do you have as far as resources, time, budget, or technology?
+   * The first limitation is in device compatibility, which could lead to inconsistent user experiences, and limited customization to maintain a standardized platform. Resource constraints, such as staffing and budget, may affect development, maintenance, and integration with the third party DMV systems. Scaling the system could also be challenging without more resources.
+
+
+Gantt Chart
+Please include a screenshot of the GANTT chart that you created with Lucidchart. Be sure to check that it meets the plan described by the characters in the interview.
